@@ -1,0 +1,33 @@
+{
+    "lighting": {
+        "zone1": {
+            "state": 1,
+            "last_updated": null,
+            "rgb": [255, 255, 255],
+            "brightness": 100
+        },
+        "zone2": {
+            "state": 0,
+            "last_updated": null,
+            "rgb": [255, 255, 255],
+            "brightness": 100
+        }
+    },
+    "czone": {
+        "in_switches": {
+            "1": {
+                "state": 0,
+                "last_updated": null
+            },
+            "2": {
+                "state": 1,
+                "last_udpated": null
+            }
+        },
+        "dc_out": {
+            "1": {},
+            "2": {},
+            "3": {}
+        }
+    }
+}

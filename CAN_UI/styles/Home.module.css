@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+  height: auto;
+  min-height: 95vh;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.devices {
+  width: 25%;
+}
+
+.device{
+  border: 1px solid black;
+  margin: 0;
+  width: 50%;
+}
+
+.espan{
+  display: none;
+}
+
+.name{
+  margin: 8px;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.information{
+  width: 30%;
+}
+
+.buttons{
+  margin: 10px;
+}
+
+.messages{
+  width: 35%;
+}
+
+.changed{
+  background-color: #F27F0C;
+}
+
+.notchanged{
+  background-color: transparent;
+}

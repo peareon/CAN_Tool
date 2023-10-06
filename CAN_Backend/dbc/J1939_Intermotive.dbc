@@ -1,0 +1,44 @@
+VERSION "1.0"
+
+CM_ "SAE J1939 DBC File for Intermotive
+Author: Dominique Parolin
+for Winnebago Industries Inc.
+";
+
+
+BO_ 2498759168 TEST1: 8 Vector__XXX 
+    SG_ Data1:
+        0|8@1+  (1,0)   [0|255]     "Zone"     Vector__XXX
+    SG_ Data2:
+        8|8@1+  (1,0)   [0|127]     "Mode"     Vector__XXX
+    SG_ Data3: 
+        16|8@1+ (1,0)  [-131|131]  "Red"  Vector__XXX
+    SG_ Data4:
+        24|8@1+    (1,0)   [0|429600]  "Green"  Vector__XXX
+    SG_ Data5:
+        32|8@1+    (1,0)    [0|255] "Blue"  Vector__XXX
+    SG_ Data6:
+        40|8@1+    (1,0)    [0|255] "White"  Vector__XXX
+    SG_ Data7:
+        48|8@1+    (1,0)    [0|255] "Dim"  Vector__XXX
+    SG_ Data8:
+        56|8@1+    (1,0)    [0|255] "Fade"  Vector__XXX
+
+
+BO_ 2498759680 TEST2: 8 Vector__XXX 
+    SG_ Data1:
+        0|8@1+  (1,0)   [0|255]     "Zone"     Vector__XXX
+    SG_ Data2:
+        8|8@1+  (1,0)   [0|127]     "Mode"     Vector__XXX
+    SG_ Data3: 
+        16|8@1+ (1,0)  [-131|131]  "Red"  Vector__XXX
+    SG_ Data4:
+        24|8@1+    (1,0)   [0|429600]  "Green"  Vector__XXX
+    SG_ Data5:
+        32|8@1+    (1,0)    [0|255] "Blue"  Vector__XXX
+    SG_ Data6:
+        40|8@1+    (1,0)    [0|255] "White"  Vector__XXX
+    SG_ Data7:
+        48|8@1+    (1,0)    [0|255] "Dim"  Vector__XXX
+    SG_ Data8:
+        56|8@1+    (1,0)    [0|255] "Fade"  Vector__XXX

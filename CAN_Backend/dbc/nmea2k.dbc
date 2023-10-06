@@ -1,0 +1,315 @@
+VERSION "1.0"
+
+CM_ "NMEA2000 DBC File
+Author: Dominique Parolin
+for Winnebago Industries Inc.
+";
+
+
+BO_ 2180124928 FLUID_LEVEL: 8 Vector__XXX 
+    SG_ Instance:
+        0|4@1+  (1,0)   [0|127]     "A"     Vector__XXX
+    SG_ Fluid_Type:
+        4|4@1+  (1,0)   [0|127]     "A"     Vector__XXX
+    SG_ Fluid_Level: 
+        8|16@1+ (0.004,0)  [-131|131]  "%"  Vector__XXX
+    SG_ Tank_Capacity:
+        24|32@1+    (0.0001,0)   [0|4294967295]  "cu m"  Vector__XXX
+    SG_ NMEA_Reserved:
+        56|8@1+    (1,0)    [0|255] "Reserved"  Vector__XXX
+
+
+VAL_ 2180124928 Fluid_Type
+    0 "Fuel"
+    1 "Fresh Water"
+    2 "Waste Water"
+    3 "Live Well"
+    4 "Oil"
+    5 "Black water"
+    6 "Fuel (Gasoline)"
+    14 "Error"
+    15 "Data not available";
+
+
+VAL_ 2180124928 Tank_Capacity
+    4294967295 "Not set";
+
+
+BO_ 2180844544 Temperature_Extended_Range: 8    Vector__XXX
+    SG_ Sequence_ID:
+        0|8@1+  (1,0)   [0|252] "Id"    Vector__XXX
+    SG_ Temperature_Instance:
+        8|8@1+  (1,0)   [0|255] "Instance"  Vector__XXX
+    SG_ Temperature_Source:
+        16|8@1+ (1,0)   [0|255] "Source"    Vector__XXX
+    SG_ Actual_Temperature:
+        24|24@1+    (0.001,0) [0|16777212]  "deg K" Vector__XXX
+    SG_ Set_Temperature:
+        48|16@1+    (0.1,0) [0|6553.2]  "deg K" Vector__XXX
+
+
+VAL_ 2180844544 Temperature_Instance
+    254 "Error"
+    255 "Not available";
+
+
+VAL_ 2180844544 Temperature_Source
+    0 "Sea Temperature"
+    1 "Outside Temperature"
+    2 "Inside Temperature"
+    3 "Engine Room Temperature"
+    4 "Main Cabin Temperature"
+    5 "Live Well Temperature"
+    6 "Bait Well Temperature"
+    7 "Refrigeration Temperature"
+    8 "Heating System Temperature"
+    9 "Dew Point Temperature"
+    10 "Wind Chill Temperature, Apparent"
+    11 "Wind Chill Temperature, Theoretical"
+    12 "Heat Index Temperature"
+    13 "Freezer Temperature"
+    14 "Exhaust Gas Temperature"
+    
+    253 "Not Supported"
+    254 "Error"
+    255 "No Change / Data Not Available";
+
+
+VAL_ 2180844544 Set_Temperature
+    65535 "Not set";
+
+
+BO_ 2180123904 Binary_Status_Report: 8   Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|252] "Instance"  Vector__XXX
+    SG_ Status_1:
+        8|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_2:
+        10|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_3:
+        12|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_4:
+        14|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_5:
+        16|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_6:
+        18|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_7:
+        20|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_8:
+        22|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_9:
+        24|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_10:
+        26|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_11:
+        28|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_12:
+        30|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_13:
+        32|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_14:
+        34|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_15:
+        36|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_16:
+        38|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_17:
+        40|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_18:
+        42|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_19:
+        44|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_20:
+        46|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_21:
+        48|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_22:
+        50|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_23:
+        52|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_24:
+        54|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_25:
+        56|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_26:
+        58|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_27:
+        60|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Status_28:
+        62|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+
+
+VAL_ 2180123904 Status_1 
+    0 "Off"
+    1 "On"
+    2 "Reserved"
+    3 "No Change";
+
+VAL_ 2180123904 Status_2
+    0 "Off"
+    1 "On"
+    2 "Reserved"
+    3 "No Change";
+
+
+VAL_ 2180123904 Status_3
+    0 "Off"
+    1 "On"
+    2 "Reserved"
+    3 "No Change";
+
+
+VAL_ 2180123904 Status_4
+    0 "Off"
+    1 "On"
+    2 "Reserved"
+    3 "No Change";
+
+VAL_ 2180123904 Status_5
+    0 "Off"
+    1 "On"
+    2 "Reserved"
+    3 "No Change";
+
+VAL_ 2180123904 Status_6
+    0 "Off"
+    1 "On"
+    2 "Reserved"
+    3 "No Change";
+
+VAL_ 2180123904 Status_7
+    0 "Off"
+    1 "On"
+    2 "Reserved"
+    3 "No Change";
+
+VAL_ 2180123904 Status_8
+    0 "Off"
+    1 "On"
+    2 "Reserved"
+    3 "No Change";
+
+
+BO_ 2180125184  DC_Detailed_Status: 8   Vector__XXX
+    SG_ Sequence_ID:
+        0|8@1+  (1,0)   [0|252] "#"  Vector__XXX
+    SG_ Instance:
+        8|8@1+  (1,0)   [0|252] "#"  Vector__XXX
+    SG_ DC_Type:
+        16|8@1+ (1,0)   [0|255] "Type"  Vector__XXX
+    SG_ State_Of_Charge:
+        24|8@1+ (1,0)   [0|252] "%" Vector__XXX
+    SG_ State_Of_Health:
+        32|8@1+ (1,0)   [0|252] "%" Vector__XXX
+    SG_ Time_Remaining:
+        40|16@1+    (1,0)   [0|65532]   "Minutes"   Vector__XXX
+
+VAL_ 2180125184 DC_Type
+    0 "Battery"
+    1 "Alternator"
+    2 "Converter"
+    3 "Solar Cell"
+    4 "Wind Generator"
+    254 "Error"
+    255 "Data Not Available";
+
+
+BO_ 2180125696 Battery_Status: 8    Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|252] "#" Vector__XXX
+    SG_ Battery_Voltage:
+        8|16@1+ (0.01,0)    [-32764|32764]  "V" Vector__XXX
+    SG_ Battery_Current:
+        24|16@1-    (0.1,0) [-32764|32764]  "A" Vector__XXX
+    SG_ Sequence_ID:
+        56|8@1+ (1,0)   [0|252] "#" Vector__XXX
+
+
+BO_ 2180911104 Trim_Tab_Status: 8   Vector__XXX
+    SG_ Port_Trim_Tab:
+        0|8@1+  (1,124)   [-124|124] "%" Vector__XXX
+    SG_ Starboard_Trim_Tab:
+        8|8@1+  (1,124)   [-124|124] "%" Vector__XXX
+    SG_ NMEA_Reserved:
+        16|48@1+  (1,0)   [0|281474976710655] "NA" Vector__XXX
+
+
+
+VAL_ 2179993600 Source
+    0 "GPS"
+    1 "GLONASS"
+    2 "WWV or equivalent Radio Station Time Sync"
+    3 "Local Cesium Clock"
+    4 "Local Rubidium Clock"
+    5 "Local Crystal Clock"
+    6 "Reserved"
+    7 "Reserved"
+    8 "Reserved"
+    9 "Reserved"
+    10 "Reserved"
+    11 "Reserved"
+    12 "Reserved"
+    13 "Reserved"
+    14 "Reserved"
+    15 "Null";
+
+
+BO_ 2179993600 System_Time: 8   Vector__XXX
+    SG_ Sequence_ID:
+        0|8@1+  (1,0)   [0|252] "#" Vector__XXX
+    SG_ Source:
+        8|4@1+  (1,0)   [0|15] "" Vector__XXX
+    SG_ NMEA_Reserved:
+        12|4@1+  (1,0)   [0|15] "" Vector__XXX
+    SG_ Date:
+        16|16@1+    (1,0)   [0|65532]   "Days"  Vector__XXX
+    SG_ Time:
+        32|32@1+    (0.0001,0)   [0|4294967295]   "Seconds"  Vector__XXX
+
+
+BO_ 2582778883 Battery_Status_Specific: 8   CZone_Shunt
+    SG_ Instance:
+        0|8@1+      (1,0)       [0|252]         "#"     CZone_Shunt
+    SG_ Battery_Voltage:
+        8|16@1-     (0.01,0)    [0|32764]  "V"     CZone_Shunt
+    SG_ Battery_Current:
+        24|16@1-    (0.1,0)     [0|32764]  "A"     CZone_Shunt
+    SG_ Sequence_ID:
+        56|8@1+     (1,0)       [0|252]         "#"     CZone_Shunt
+
+
+BO_ 2516387991 Temperature: 8   CZone_RV1_Input_Temp
+    SG_ Sequence_ID:
+        0|8@1+      (1,0)       [0|252]         "#"     CZone_RV1_Input_Temp
+    SG_ Temperature_Instance:
+        8|8@1+      (1,0)       [0|252]         "#"     CZone_RV1_Input_Temp
+    SG_ Temperature_Source:
+        16|8@1+     (1,0)       [0|255]         "#"     CZone_RV1_Input_Temp
+    SG_ Actual_Temperature:
+        24|16@1+    (0.01,0)    [0|65535]   "deg K"     CZone_RV1_Input_Temp
+    SG_ Set_Temperature:
+        40|16@1+    (0.01,0)    [0|65535]   "deg K"     CZone_RV1_Input_Temp
+    SG_ NMEA_Reserved:
+        56|8@1+     (1,0)       [0|255]     "NA"    CZone_RV1_Input_Temp
+
+VAL_ 2516387991 Temperature_Source
+    0 "Sea Temperature"
+    1 "Outside Temperature"
+    2 "Inside Temperature"
+    3 "Engine Room Temperature"
+    4 "Main Cabin Temperature"
+    5 "Live Well Temperature"
+    6 "Bait Well Temperature"
+    7 "Refrigeration Temperature"
+    8 "Heating System Temperature"
+    9 "Dew Point Temperature"
+    10 "Wind Chill Temperature, Apparent"
+    11 "Wind Chill Temperature, Theoretical"
+    12 "Heat Index Temperature"
+    13 "Freezer Temperature"
+    14 "Exhaust Gas Temperature"
+    
+    253 "Not Supported"
+    254 "Error"
+    255 "No Change / Data Not Available";

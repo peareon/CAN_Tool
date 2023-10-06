@@ -1,0 +1,33 @@
+VERSION "DBC For Blink 4 button panel 1.0"
+
+CM_ "CAN messages for Blink PKP2200SI";
+
+
+BO_ 1045 BLI_1: 1 Vector__XXX
+    SG_ Intensity : 0|8@1+ (1,0) [0|63] "%" Vector__XXX
+
+
+BO_ 789 LBP_1: 3 Vector__XXX
+    SG_ R1              :  0|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ R2              :  1|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ R3              :  2|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ R4              :  3|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ G1              :  8|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ G2              :  9|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ G3              :  10|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ G4              :  11|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ B1              :  16|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ B2              :  17|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ B3              :  18|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+    SG_ B4              :  19|1@1+   (1,0)           [0|1]       "A"     Vector__XXX
+
+BO_ 1813 HEARTBEAT: 1 Vector__XXX
+    SG_ DATA_B1:
+        0|8@1+   (1,0)           [0|0]       "A"     Vector__XXX
+
+VAL_ 1813 DATA_B1
+    0 "Bootup"
+    4 "Stop"
+    5 "Operational"
+    127 "Pre-Operational";
+

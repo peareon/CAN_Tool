@@ -1,0 +1,104 @@
+VERSION "1.0"
+
+CM_ "SAE J1939 DBC File for Lighting Controller
+Author: Dominique Parolin
+for Winnebago Industries Inc.
+";
+
+
+BO_ 2164137984 Lighting_Broadcast: 8 Vector__XXX 
+    SG_ Data1:
+        0|8@1+  (1,0)   [0|255]     "Zone"     Vector__XXX
+    SG_ Data2:
+        8|8@1+  (1,0)   [0|127]     "Mode"     Vector__XXX
+    SG_ Data3: 
+        16|8@1+ (1,0)  [-131|131]  "Red"  Vector__XXX
+    SG_ Data4:
+        24|8@1+    (1,0)   [0|429600]  "Green"  Vector__XXX
+    SG_ Data5:
+        32|8@1+    (1,0)    [0|255] "Blue"  Vector__XXX
+    SG_ Data6:
+        40|8@1+    (1,0)    [0|255] "White"  Vector__XXX
+    SG_ Data7:
+        48|8@1+    (1,0)    [0|255] "Dim"  Vector__XXX
+    SG_ Data8:
+        56|8@1+    (1,0)    [0|255] "Fade"  Vector__XXX
+
+
+VAL_ 2164137984 Data1
+    1 "Zone1"
+    2 "Zone2"
+    3 "Zone3"
+    4 "Zone4"
+    255 "System Stat";
+
+
+VAL_ 2164137984 Data2
+    0 "Single Color"
+    1 "Red Fade"
+    2 "Green Fade"
+    3 "Blue Fade"
+    4 "4 Color Fade"
+    
+    7 "7 Color Fade"
+    8 "Custom Color Fade"
+
+    128 "Instant White";
+
+
+BO_ 2365325380 Lighting_Command: 8 Vector__XXX
+    SG_ Module_Group:
+        0|8@1+  (1,0)   [0|255] ""  Vector__XXX
+    SG_ Module_Address:
+        8|8@1+  (1,0)   [0|255] ""  Vector__XXX
+    SG_ Command:
+        16|8@1+ (1,0)   [0|255] ""  Vector__XXX
+    SG_ Data4:
+        24|8@1+ (1,0)   [0|255] ""  Vector__XXX
+    SG_ Data5:
+        32|8@1+ (1,0)   [0|255] ""  Vector__XXX
+    SG_ Data6:
+        40|8@1+ (1,0)   [0|255] ""  Vector__XXX
+    SG_ Data7:
+        48|8@1+ (1,0)   [0|255] ""  Vector__XXX
+    SG_ Data8:
+        56|8@1+ (1,0)   [0|255] ""  Vector__XXX
+
+
+VAL_ 2365325380 Command
+    2 "Mode"
+    3 "Brightness"
+    4 "Fade Speed"
+    
+    6 "On/Off/Lock"
+    
+    10 "PowerOn"
+    
+    12 "InputState"
+    
+    50 "Cycle"
+
+    60 "Color Temp Set"
+
+    80 "BT Enable"
+
+    255 "Reset Status";
+
+
+BO_ 2365391068 Lighting_Response: 8 Vector__XXX
+    SG_ Data1:
+        0|8@1+  (1,0)   [0|255]     "Zone"     Vector__XXX
+    SG_ Data2:
+        8|8@1+  (1,0)   [0|127]     "Mode"     Vector__XXX
+    SG_ Data3: 
+        16|8@1+ (0.004,0)  [-131|131]  "Red"  Vector__XXX
+    SG_ Data4:
+        24|8@1+    (1,0)   [0|429600]  "Green"  Vector__XXX
+    SG_ Data5:
+        32|8@1+    (1,0)    [0|255] "Blue"  Vector__XXX
+    SG_ Data6:
+        40|8@1+    (1,0)    [0|255] "White"  Vector__XXX
+    SG_ Data7:
+        48|8@1+    (1,0)    [0|255] "Dim"  Vector__XXX
+    SG_ Data8:
+        56|8@1+    (1,0)    [0|255] "Fade"  Vector__XXX

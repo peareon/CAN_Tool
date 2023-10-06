@@ -1,0 +1,482 @@
+VERSION "1.0"
+
+CM_ "RVC DBC File
+Author: Dominique Parolin
+for Winnebago Industries Inc.
+";
+
+
+BO_ 2180958720 DM_RV: 8 Vector__XXX
+    SG_ Operating_status_1:
+        0|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Operating_status_2:
+        2|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Yellow_Lamp_status:
+        4|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Red_Lamp_status:
+        6|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ DSA:
+        8|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_MSB:
+        16|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_ISB:
+        24|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ FMI:
+        32|5@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_LSB:
+        37|3@1+      (1,0)   [0|255]   "A"     Vector__XXX
+
+VAL_ 2180958720 FMI
+    0	"Datum value above normal range"
+    1	"Datum value below normal range"
+    2	"Datum value erratic or invalid"
+    3	"Short circuit to high voltage (or complete sensor input failure)"
+    4	"Short circuit to low voltage (or complete sensor input failure) "
+    5	"Open circuit, or output current below normal"
+    6	"Grounded circuit, or output current above normal"
+    7	"Mechanical device not responding"
+    8	"Datum value showing error of frequency, pulse width, or period"
+    9	"Datum not updating at proper rate"
+    10	"Datum value fluctuating at abnormal rate"
+    11	"Failure not identifiable"
+    12	"Bad intelligent RV-C node"
+    13	"Calibration required"
+    14	"None of the above"
+    15	"Datum valid but above normal operational range (least severe) "
+    16	"Datum valid but above normal operational range (moderately severe) "
+    17	"Datum valid but below normal operational range (least severe) "
+    18	"Datum valid but below normal operational range (moderately severe) "
+    19	"Received invalid network datum "
+    20	"Network Device Not Responding "
+    21	"Networked Device Not Responding (failure due to the unresponsiveness of a second networked device) "
+    22	"Reverse polarity "
+    23	"Reserved"
+    24	"Reserved"
+    25	"Reserved"
+    26	"Reserved"
+    27	"Reserved"
+    28	"Reserved"
+    29	"Reserved"
+    30	"Reserved"
+    31	"Failure mode not available";
+
+VAL_ 2180958720 SPN_LSB
+    0 "Specific Point Unknown"
+    1 "Node Microprocessor (or ECM)"
+    2 "Node Analog-Digital Converter"
+    3 "Node Settings or Configuration"
+    4 "Node RAM"
+    5 "Node Power Supply"
+    6 "Node Temperature"
+    7 "Node Clock / Timer"
+    8 "Node Date / Time. Usually indicates a product that requires a clock DGN from another source."
+    9 "Node RV-C Connection. Usually indicates a product that requires a specific DGN from another source."
+    10 "Node Serial/ID Number"
+    11 "Node Processor Supervisor (Watchdog)"
+    12 "Node Firmware"
+    13 "Node Internal Subnetwork Communications.";
+
+
+BO_ 2163081216 ADDRESS_REQUEST: 8 Vector_XXX
+    SG_ SerialNumber:
+        0|21@1+      (1,0)   [0|2097151]     "A"     Vector_XXX
+    SG_ Manufacturer_Code:
+        21|11@1+     (1,0)   [0|100000]      "A"     Vector_XXX
+    SG_ NodeInstance:
+        32|3@1+ (1,0) [0|7] "A" Vector_XXX
+    SG_ Function_Instance:
+        35|5@1+ (1,0) [0|31] "A" Vector_XXX
+    SG_ Compatibility_Field1:
+        40|8@1+ (1,0) [0|255] "A" Vector_XXX
+    SG_ Reserved:
+        48|1@1+ (1,0) [0|1] "A" Vector_XXX
+    SG_ Compatibility_Field2:
+        49|7@1+ (1,0) [0|127] "A" Vector_XXX
+    SG_ Compatibility_Field3:
+        56|4@1+ (1,0) [0|15] "A" Vector_XXX
+    SG_ Compatibility_Field4:
+        60|3@1+ (1,0) [0|7] "A" Vector_XXX
+    SG_ Arbitrary_Address_Capable:
+        63|1@1+ (1,0) [0|1] "A" Vector_XXX
+
+VAL_ 2163081216 Arbitrary_Address_Capable
+    0 "Node uses a fixed source address"
+    1 "Node supports address claiming";
+
+VAL_ 2163081216 Manufacturer_Code
+    101	"Atwood Mobile Products"
+    102	"Carefree of Colorado"
+    103	"Dometic Corporation"
+    104	"Freightliner Custom Chassis Corp."
+    105	"General Dynamics - Intellitec Products"
+    106	"Girard Systems"
+    107	"Hopkins Manufacturing Corp."
+    108	"HWH Corporation"
+    109	"Integrated Power Systems"
+    110	"Onan / Cummins Power Generation"
+    111	"Progressive Dynamics, Inc."
+    112	"SilverLeaf Electronics, Inc."
+    113	"Spartan Motors Chassis, Inc."
+    114	"Technology Research Corporation"
+    115	"Transportation Systems Design, Inc."
+    116	"Vehicle Systems, Inc."
+    117	"Wire Design, Inc."
+    118	"Workhorse Custom Chassis"
+    119	"Xantrex Technology, Inc."
+    120	"Power Gear"
+    121	"RV Products"
+    122	"Suburban"
+    123	"Borg-Warner"
+    124	"Garnet Instruments"
+    125	"American Technology"
+    126	"Automated Engineering Corp.";
+
+
+BO_ 2181037312 DC_SOURCE_STATUS_1: 8 Vector__XXX
+    SG_ DC_Instance:
+        0|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Device_Priority:
+        8|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ DC_Voltage:
+        16|16@1+    (0.05,0)    [0|65535]   "V"     Vector__XXX
+    SG_ DC_Current:
+        32|32@1+    (0.001,-2000000)   [0|4294967295]   "A"     Vector__XXX
+
+VAL_ 2181037312 DC_Instance
+    0 "Invalid"
+    1 "Main House Battery Bank"
+    2 "Chassis Start Battery"
+    3 "Secondary House Battery Bank"
+    4 "Generator Starter Battery"
+    5 "Arbitrary";
+
+VAL_ 2181037312 Device_Priority
+    120 "Battery SOC/BMS device"
+    100 "Inverter/Charger"
+    80 "Charger"
+    60 "Inverter"
+    40 "Voltmeter/Ammeter"
+    20 "Voltmeter"
+    0 "No priority, always reporting";
+
+VAL_ 2181037312 DC_Current
+    4294967295 "NA";
+
+
+BO_ 2181037056 DC_SOURCE_STATUS_2: 8 Vector__XXX
+    SG_ DC_Instance:
+        0|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Device_Priority:
+        8|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Source_Temperature:
+        16|16@1+    (0.03125,-273)    [0|65535]   "deg C"     Vector__XXX
+    SG_ State_Of_Charge:
+        32|8@1+    (0.5,0)   [0|255]   "%"     Vector__XXX
+    SG_ Time_Remaining:
+        40|16@1+    (1,0)   [0|65535]   "Minutes"     Vector__XXX
+    SG_ Time_Remaining_Interpretation:
+        56|2@1+     (1,0)   [0|3]   "NA"    Vector__XXX
+
+VAL_ 2181037056 DC_Instance
+    0 "Invalid"
+    1 "Main House Battery Bank"
+    2 "Chassis Start Battery"
+    3 "Secondary House Battery Bank"
+    4 "Generator Starter Battery"
+    5 "Arbitrary";
+
+VAL_ 2181037056 Device_Priority
+    120 "Battery SOC/BMS device"
+    100 "Inverter/Charger"
+    80 "Charger"
+    60 "Inverter"
+    40 "Voltmeter/Ammeter"
+    20 "Voltmeter"
+    0 "No priority, always reporting";
+
+VAL_ 2181037056 Time_Remaining_Interpretation
+    0 "Time to Empty"
+    1 "Time to Full"
+    3 "NA - Implicit time to empty";
+
+
+BO_ 2164232704 PROP_MODULE_STATUS_2: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Module_ID:
+        8|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Cell_Count:
+        16|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Last_Fault_Code:
+        24|8@1+ (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Balance_Map:
+        32|16@1+ (1,0)   [0|65535]     ""  Vector__XXX
+    SG_ BMS_Temp:
+        48|8@1+ (1, -40)    [-40|210]   "C"  Vector__XXX
+    SG_ FW_Version:
+        56|8@1+ (1, 0)  [0|255] ""  Vector__XXX
+
+
+BO_ 2164232448 PROP_MODULE_STATUS_1: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Module_ID:
+        8|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Cell_Count:
+        16|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Status:
+        24|8@1+ (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Cells_Temp:
+        32|8@1+ (1,-40)   [-40|210]     "C"  Vector__XXX
+    SG_ Cell_Voltage_Avg:
+        40|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_Voltage_High:
+        48|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_Voltage_Low:
+        56|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+
+
+BO_ 2164232960 PROP_MODULE_CELL_BLOCK_1: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Module_ID:
+        8|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Cell_Count:
+        16|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Status:
+        24|8@1+ (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Cell_1_Voltage:
+        32|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_2_Voltage:
+        40|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_3_Voltage:
+        48|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_4_Voltage:
+        56|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+
+
+BO_ 2164233216 PROP_MODULE_CELL_BLOCK_2: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Module_ID:
+        8|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Cell_Count:
+        16|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Status:
+        24|8@1+ (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Cell_5_Voltage:
+        32|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_6_Voltage:
+        40|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_7_Voltage:
+        48|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_8_Voltage:
+        56|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+
+
+BO_ 2164233472 PROP_MODULE_CELL_BLOCK_3: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Module_ID:
+        8|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Cell_Count:
+        16|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Status:
+        24|8@1+ (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Cell_9_Voltage:
+        32|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_10_Voltage:
+        40|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_11_Voltage:
+        48|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_12_Voltage:
+        56|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+
+
+BO_ 2164233728 PROP_MODULE_CELL_BLOCK_4: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Module_ID:
+        8|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Cell_Count:
+        16|8@1+  (1,0)   [0|255]     "#" Vector__XXX
+    SG_ Status:
+        24|8@1+ (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Cell_13_Voltage:
+        32|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_14_Voltage:
+        40|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_15_Voltage:
+        48|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+    SG_ Cell_16_Voltage:
+        56|8@1+ (1, 0)    [0|250]   "V"  Vector__XXX
+
+
+BO_ 2181036800 DC_SOURCE_STATUS_3: 8 Vector__XXX
+    SG_ DC_Instance:
+        0|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Device_Priority:
+        8|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ State_Of_Health:
+        16|8@1+  (0.5,0)   [0|255]     "%"  Vector__XXX
+    SG_ Capacity_Remaining:
+        24|16@1+    (1,0)    [0|65535]   "Ah"     Vector__XXX
+    SG_ Relative_Capacity:
+        40|8@1+    (0.5,0)   [0|255]   "%"     Vector__XXX
+    SG_ AC_RMS_Ripple:
+        48|16@1+    (1,0)   [0|65535]   "mV"     Vector__XXX
+
+BO_ 2180958464 DC_SOURCE_STATUS_4: 8 Vector__XXX
+    SG_ DC_Instance:
+        0|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Device_Priority:
+        8|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Desired_Charge_State:
+        16|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Desired_DC_Voltage:
+        24|16@1+    (0.05,0)    [0|65535]   "V"     Vector__XXX
+    SG_ Desired_DC_Current:
+        40|16@1+    (0.05,0)   [0|65535]   "A"     Vector__XXX
+    SG_ Battery_Type:
+        56|4@1+    (1,0)   [0|15]   "NA"     Vector__XXX
+
+
+BO_ 2180957952 DC_SOURCE_STATUS_6: 8    Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255]     "#"  Vector__XXX
+    SG_ High_Voltage_Alarm_Status:
+        8|2@1+  (1,0)   [0|3]     ""  Vector__XXX
+    SG_ High_Voltage_Disconnect_Status:
+        10|2@1+  (1,0)   [0|3]     ""  Vector__XXX
+    SG_ Low_Voltage_Alarm_Status:
+        12|2@1+  (1,0)   [0|3]     ""  Vector__XXX
+    SG_ Low_Voltage_Disconnect_Status:
+        14|2@1+  (1,0)   [0|3]     ""  Vector__XXX
+    SG_ Low_SOC_Alarm_Status:
+        16|2@1+  (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Low_SOC_Disconnect_Status:
+        18|2@1+  (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Low_Temperature_Alarm_Status:
+        20|2@1+  (1,0)   [0|255]     ""  Vector__XXX
+    SG_ Low_Temperature_Disconnect_Status:
+        22|2@1+  (1,0)   [0|255]     ""  Vector__XXX
+    SG_ High_Temperature_Alarm_Status:
+        24|2@1+  (1,0)   [0|255]     ""  Vector__XXX
+    SG_ High_Temperature_Disconnect_Status:
+        26|2@1+  (1,0)   [0|255]     ""  Vector__XXX
+
+
+BO_ 2180949248 DC_SOURCE_STATUS_11: 8 Vector__XXX
+    SG_ DC_Instance:
+        0|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Device_Priority:
+        8|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Discharge_onOff_Status:
+        16|2@1+  (1,0)   [0|3]     "NA"  Vector__XXX
+    SG_ Charge_onOff_Status:
+        18|2@1+  (1,0)   [0|3]     "NA"  Vector__XXX
+    SG_ Charge_Detected:
+        20|2@1+  (1,0)   [0|3]     "NA"  Vector__XXX
+    SG_ Reserve_Status:
+        22|2@1+  (1,0)   [0|3]     "NA"  Vector__XXX
+    SG_ Full_Capacity:
+        24|16@1+    (1,0)   [0|65535]   "Ah"    Vector__XXX
+    SG_ DC_Power:
+        40|16@1+    (1,0)   [0|65535]   "W" Vector__XXX
+
+
+BO_ 2164228096 PROP_BMS_STATUS_1: 8 Vector__XXX
+    SG_ DC_Instance:
+        0|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Number_Modules_Sensors:
+        8|8@1+  (1,0)   [0|255]     "#"  Vector__XXX
+    SG_ BMS_Internal_Temp:
+        16|8@1+  (1,-40)   [0|255]     "deg C"  Vector__XXX
+    SG_ Max_Recorded_Temp:
+        24|8@1+  (1,-40)   [0|255]     "deg C"  Vector__XXX
+    SG_ Min_Recorded_Temp:
+        32|8@1+  (1,-40)   [0|255]     "deg C"  Vector__XXX
+    SG_ BMS_Status_Code:
+        40|24@1+  (1,0)   [0|16777215]     ""  Vector__XXX
+
+
+BO_ 2164228352 PROP_BMS_STATUS_2: 8 Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255] "#" Vector__XXX
+    SG_ Load_Contactor_Voltage:
+        8|16@1+ (0.05,0)    [0|65535]   "V" Vector__XXX
+    SG_ Charge_Contactor_Voltage:
+        24|16@1-    (0.05,0)    [0|65535]   "A" Vector__XXX
+    SG_ Last_BMS_Fault_Code:
+        40|24@1+    (1,0)   [0|16777215]   ""  Vector__XXX
+
+
+BO_ 2164228608 PROP_BMS_STATUS_3: 8 Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255] "#" Vector__XXX
+    SG_ Total_Lifetime_AH_Consumed:
+        8|32@1+ (1,0)   [0|4294967295]  "Ah"    Vector__XXX
+        
+
+BO_ 2164228864 PROP_BMS_STATUS_4: 8 Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255] "#" Vector__XXX
+    SG_ CAN_Charger_DC_Voltage:
+        8|16@1+ (0.05,0)    [0|65535]   "V" Vector__XXX
+    SG_ CAN_Charger_DC_Current:
+        24|16@1+    (0.05,-1600)    [0|65535]   "A" Vector__XXX
+    SG_ CAN_Charger_Status:
+        40|16@1+    (1,0)   [0|65535]   ""  Vector__XXX
+
+VAL_ 2164228864 CAN_Charger_DC_Current
+    65535 "NA";
+
+
+BO_ 2162893824 CHARGER_STATUS_INFO: 8  Vector__XXX
+    SG_ Communication_Status:
+        0|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Hardware_Status:
+        2|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Input_Voltage_Status:
+        4|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ High_Temperature_Protect_Status:
+        6|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Start_State:
+        8|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Battery_Connection_State:
+        10|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Reserved:
+        12|4@1+ (1,0)   [0|15]  ""  Vector__XXX
+    SG_ Output_Voltage_Charging:
+        16|16@1+ (0.1,0) [0|65535] "V" Vector__XXX
+    SG_ Output_Current_Charging:
+        32|16@1+    (0.1,-320) [0|65535]   "A" Vector__XXX
+    SG_ Temperature_Of_Charger:
+        48|8@1+ (1,0)   [0|255] "C" Vector__XXX
+    SG_ Reserved_2:
+        56|8@1+ (1,0)   [0|255] ""  Vector__XXX
+
+
+BO_ 2565547072 CHARGER_STATUS_INFO: 8  Vector__XXX
+    SG_ Communication_Status:
+        0|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Hardware_Status:
+        2|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Input_Voltage_Status:
+        4|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ High_Temperature_Protect_Status:
+        6|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Start_State:
+        8|2@1+  (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Battery_Connection_State:
+        10|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Reserved:
+        12|4@1+ (1,0)   [0|15]  ""  Vector__XXX
+    SG_ Output_Voltage_Charging:
+        16|16@1+ (0.1,0) [0|65535] "V" Vector__XXX
+    SG_ Output_Current_Charging:
+        32|16@1+    (0.1,-320) [0|65535]   "A" Vector__XXX
+    SG_ Temperature_Of_Charger:
+        48|8@1+ (1,0)   [0|255] "C" Vector__XXX
+    SG_ Reserved_2:
+        56|8@1+ (1,0)   [0|255] ""  Vector__XXX

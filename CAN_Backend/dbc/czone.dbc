@@ -1,0 +1,134 @@
+VERSION "1.0"
+
+CM_ "CZONE Proprietary MSG DBC File
+Author: Dominique Parolin
+for Winnebago Industries Inc.
+";
+
+
+CM_ "Specific for DIP Switch 1 device with priority";
+BO_ 2633958401 Heartbeat: 8 Vector__XXX
+    SG_ Manufacturer_Code:
+        0|16@1+ (1,0)   [0|65535]   "ID"    Vector__XXX
+    SG_ Dipswitch:
+        16|8@1+ (1,0)   [0|255]     "DIP"   Vector__XXX
+    SG_ Instance:
+        24|8@1+ (1,0)   [0|255]     "?"     Vector__XXX
+    SG_ Output1:
+        32|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output2:
+        33|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output3:
+        34|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output4:
+        35|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output5:
+        36|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output6:
+        37|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output7:
+        38|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output8:
+        39|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output9:
+        40|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output10:
+        41|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output11:
+        42|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output12:
+        43|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output13:
+        44|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output14:
+        45|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output15:
+        46|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output16:
+        47|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output17:
+        48|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output18:
+        49|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output19:
+        50|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output20:
+        51|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output21:
+        52|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output22:
+        53|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output23:
+        54|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output24:
+        55|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Byte8:
+        56|8@1+ (1,0)   [0|255] "?"         Vector__XXX
+
+
+VAL_ 2633958401 Manufacturer_Code
+    39207 "BEP Marine";
+
+
+CM_ "Used for just the PGN portion for all devices and priorities";
+BO_ 2164196352 Heartbeat: 8 Vector__XXX
+    SG_ Manufacturer_Code:
+        0|16@1+ (1,0)   [0|65535]   "ID"    Vector__XXX
+    SG_ Dipswitch:
+        16|8@1+ (1,0)   [0|255]     "DIP"   Vector__XXX
+    SG_ Instance:
+        24|8@1+ (1,0)   [0|255]     "?"     Vector__XXX
+    SG_ Output1:
+        32|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output2:
+        33|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output3:
+        34|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output4:
+        35|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output5:
+        36|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output6:
+        37|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output7:
+        38|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output8:
+        39|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output9:
+        40|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output10:
+        41|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output11:
+        42|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output12:
+        43|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output13:
+        44|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output14:
+        45|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output15:
+        46|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output16:
+        47|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output17:
+        48|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output18:
+        49|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output19:
+        50|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output20:
+        51|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output21:
+        52|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output22:
+        53|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output23:
+        54|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Output24:
+        55|1@1+ (1,0)   [0|1]   "OnOff"     Vector__XXX
+    SG_ Byte8:
+        56|8@1+ (1,0)   [0|255] "?"         Vector__XXX
+
+
+VAL_ 2164196352 Manufacturer_Code
+    39207 "BEP Marine";

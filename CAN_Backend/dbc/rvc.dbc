@@ -1,0 +1,1052 @@
+VERSION "1.0"
+
+CM_ "RVC DBC File
+Author: Dominique Parolin
+for Winnebago Industries Inc.
+";
+
+
+BO_ 2382360145 LEVELING_CONTROL_COMMAND: 4 Vector__XXX
+    SG_ Operating_Mode:
+        0|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ Jack_Retract_Left_Rear:
+        8|2@1+      (1,0)   [0|255]   "A"     Vector__XXX
+
+VAL_ 2382360145 Operating_Mode 
+    0 "Inactive"
+    3 "Store Active"
+    72 "Manual Hydraulic leveling - Biax mode"
+    82 "Automatic Hydraulic leveling - Biax mode";
+
+
+BO_ 2382359889 LEVELING_CONTROL_STATUS: 8 Vector__XXX
+    SG_ Operating_Mode          
+        :   0|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ Auto_Jack_Status        
+        :   8|2@1+      (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Air_Level_Sleep_Mode    
+        :   10|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Air_Releveling_Mode     
+        :   12|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Excessive_Slope_Initial_Warning
+        :   16|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Excessive_Slope_Final_Warning     
+        :   18|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Leveling_System_Master_Warning    
+        :   20|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Retrack_Left_Rear      
+        :   24|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Extend_Left_Rear       
+        :   26|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Retrack_Right_Front    
+        :   28|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Extend_Right_Front     
+        :   30|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Retrack_Right_Rear    
+        :   32|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Extend_Right_Rear     
+        :   34|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Retrack_Left_Front    
+        :   36|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Extend_Left_Front     
+        :   38|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Retrack_Tongue    
+        :   48|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Jack_Extend_Tongue     
+        :   50|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Park_Brake    
+        :   56|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Ignition_Key     
+        :   58|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Low_Voltage     
+        :   60|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Other_Lockout     
+        :   62|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+
+
+VAL_ 2382359889 Park_Brake 
+    0 "Leveling system may operate" 
+    1 "Leveling system may not operate because of Park Brake status" 
+    3 "Unavailable";
+
+VAL_ 2382359889 Ignition_Key 
+    0 "Leveling system may operate" 
+    1 "Leveling system may not operate because of Ignition status" 
+    3 "Unavailable";
+
+VAL_ 2382359889 Low_Voltage 
+    0 "Leveling system may operate" 
+    1 "Leveling system may not operate because of Low Voltage status" 
+    3 "Unavailable";
+
+VAL_ 2382359889 Other_Lockout 
+    0 "Leveling system may operate" 
+    1 "Leveling system may not operate because of an additional lockout" 
+    3 "Unavailable";
+
+VAL_ 2382359889 Operating_Mode
+    0 "Inactive"
+    3 "Store Active"
+    72 "Manual Hydraulic leveling - Biax mode"
+    82 "Automatic Hydraulic leveling - Biax mode";
+
+
+BO_ 2382359633 LEVELING_JACK_STATUS: 5 Vector__XXX
+    SG_ Jack_Type          
+        :   0|4@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Number_Of_Jacks        
+        :   4|4@1+      (1,0)   [0|16]     "A"     Vector__XXX
+    SG_ Extension_Left_Rear    
+        :   8|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Extension_Right_Front     
+        :   10|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Extension_Right_Rear
+        :   12|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    SG_ Extension_Left_Front     
+        :   14|2@1+     (1,0)   [0|3]     "A"     Vector__XXX
+    
+VAL_ 2382359633 Jack_Type 
+    0 "Straight Acting" 
+    1 "Kick-Down";
+
+VAL_ 2382359633 Extension_Left_Rear
+    0 "No Action" 
+    1 "Jack is Extended. Coach is not safe to move";
+
+VAL_ 2382359633 Extension_Right_Front 
+    0 "No Action" 
+    1 "Jack is Extended. Coach is not safe to move";
+
+VAL_ 2382359633 Extension_Right_Rear 
+    0 "No Action" 
+    1 "Jack is Extended. Coach is not safe to move";
+
+VAL_ 2382359633 Extension_Left_Front 
+    0 "No Action" 
+    1 "Jack is Extended. Coach is not safe to move";
+
+
+
+BO_ 2583611985 DM_RV: 8 Vector__XXX
+    SG_ Operating_status_1:
+        0|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Operating_status_2:
+        2|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Yellow_Lamp_status:
+        4|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Red_Lamp_status:
+        6|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ DSA:
+        8|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_MSB:
+        16|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_ISB:
+        24|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ FMI:
+        32|5@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_LSB:
+        37|3@1+      (1,0)   [0|255]   "A"     Vector__XXX
+
+VAL_ 2583611985 FMI
+    0	"Datum value above normal range"
+    1	"Datum value below normal range"
+    2	"Datum value erratic or invalid"
+    3	"Short circuit to high voltage (or complete sensor input failure)"
+    4	"Short circuit to low voltage (or complete sensor input failure) "
+    5	"Open circuit, or output current below normal"
+    6	"Grounded circuit, or output current above normal"
+    7	"Mechanical device not responding"
+    8	"Datum value showing error of frequency, pulse width, or period"
+    9	"Datum not updating at proper rate"
+    10	"Datum value fluctuating at abnormal rate"
+    11	"Failure not identifiable"
+    12	"Bad intelligent RV-C node"
+    13	"Calibration required"
+    14	"None of the above"
+    15	"Datum valid but above normal operational range (least severe) "
+    16	"Datum valid but above normal operational range (moderately severe) "
+    17	"Datum valid but below normal operational range (least severe) "
+    18	"Datum valid but below normal operational range (moderately severe) "
+    19	"Received invalid network datum "
+    20	"Network Device Not Responding "
+    21	"Networked Device Not Responding (failure due to the unresponsiveness of a second networked device) "
+    22	"Reverse polarity "
+    23	"Reserved"
+    24	"Reserved"
+    25	"Reserved"
+    26	"Reserved"
+    27	"Reserved"
+    28	"Reserved"
+    29	"Reserved"
+    30	"Reserved"
+    31	"Failure mode not available";
+
+VAL_ 2583611985 SPN_LSB
+    0 "Specific Point Unknown"
+    1 "Node Microprocessor (or ECM)"
+    2 "Node Analog-Digital Converter"
+    3 "Node Settings or Configuration"
+    4 "Node RAM"
+    5 "Node Power Supply"
+    6 "Node Temperature"
+    7 "Node Clock / Timer"
+    8 "Node Date / Time. Usually indicates a product that requires a clock DGN from another source."
+    9 "Node RV-C Connection. Usually indicates a product that requires a specific DGN from another source."
+    10 "Node Serial/ID Number"
+    11 "Node Processor Supervisor (Watchdog)"
+    12 "Node Firmware"
+    13 "Node Internal Subnetwork Communications.";
+
+
+BO_ 2565734542 ADDRESS_REQUEST: 8 Vector_XXX
+    SG_ SerialNumber:
+        0|21@1+      (1,0)   [0|2097151]     "A"     Vector_XXX
+    SG_ Manufacturer_Code:
+        21|11@1+     (1,0)   [0|100000]      "A"     Vector_XXX
+    SG_ NodeInstance:
+        32|3@1+ (1,0) [0|7] "A" Vector_XXX
+    SG_ Function_Instance:
+        35|5@1+ (1,0) [0|31] "A" Vector_XXX
+    SG_ Compatibility_Field1:
+        40|8@1+ (1,0) [0|255] "A" Vector_XXX
+    SG_ Reserved:
+        48|1@1+ (1,0) [0|1] "A" Vector_XXX
+    SG_ Compatibility_Field2:
+        49|7@1+ (1,0) [0|127] "A" Vector_XXX
+    SG_ Compatibility_Field3:
+        56|4@1+ (1,0) [0|15] "A" Vector_XXX
+    SG_ Compatibility_Field4:
+        60|3@1+ (1,0) [0|7] "A" Vector_XXX
+    SG_ Arbitrary_Address_Capable:
+        63|1@1+ (1,0) [0|1] "A" Vector_XXX
+
+VAL_ 2565734542 Arbitrary_Address_Capable
+    0 "Node uses a fixed source address"
+    1 "Node supports address claiming";
+
+VAL_ 2565734542 Manufacturer_Code
+    101	"Atwood Mobile Products"
+    102	"Carefree of Colorado"
+    103	"Dometic Corporation"
+    104	"Freightliner Custom Chassis Corp."
+    105	"General Dynamics - Intellitec Products"
+    106	"Girard Systems"
+    107	"Hopkins Manufacturing Corp."
+    108	"HWH Corporation"
+    109	"Integrated Power Systems"
+    110	"Onan / Cummins Power Generation"
+    111	"Progressive Dynamics, Inc."
+    112	"SilverLeaf Electronics, Inc."
+    113	"Spartan Motors Chassis, Inc."
+    114	"Technology Research Corporation"
+    115	"Transportation Systems Design, Inc."
+    116	"Vehicle Systems, Inc."
+    117	"Wire Design, Inc."
+    118	"Workhorse Custom Chassis"
+    119	"Xantrex Technology, Inc."
+    120	"Power Gear"
+    121	"RV Products"
+    122	"Suburban"
+    123	"Borg-Warner"
+    124	"Garnet Instruments"
+    125	"American Technology"
+    126	"Automated Engineering Corp.";
+
+
+BO_ 2583612047 DM_RV__ATC: 8 Vector__XXX
+    
+
+BO_ 2565857166 RVC_PROP_MSG: 8 Vector__XXX
+
+
+BO_ 2583690639 DC_SOURCE_STATUS_1: 8 Vector__XXX
+    SG_ DC_Instance:
+        0|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Device_Priority:
+        8|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ DC_Voltage:
+        16|16@1+    (0.05,0)    [0|65535]   "V"     Vector__XXX
+    SG_ DC_Current:
+        32|32@1+    (1,0)   [0|4294967295]   "A"     Vector__XXX
+
+VAL_ 2583690639 DC_Instance
+    0 "Invalid"
+    1 "Main House Battery Bank"
+    2 "Chassis Start Battery"
+    3 "Secondary House Battery Bank"
+    4 "Generator Starter Battery"
+    5 "Arbitrary";
+
+VAL_ 2583690639 Device_Priority
+    120 "Battery SOC/BMS device"
+    100 "Inverter/Charger"
+    80 "Charger"
+    60 "Inverter"
+    40 "Voltmeter/Ammeter"
+    20 "Voltmeter"
+    0 "No priority, always reporting";
+
+VAL_ 2583690639 DC_Current
+    4294967295 "NA";
+    
+
+BO_ 2583691231 DATE_TIME_STATUS: 8 Vector__XXX
+    SG_ Year:
+        0|8@1+  (1,2000)   [0|250]     "Year"  Vector__XXX
+    SG_ Month:
+        8|8@1+  (1,0)   [1|12]     "Month"  Vector__XXX
+    SG_ Day_Of_Month:
+        16|8@1+    (1,0)    [0|31]   "Day Number"     Vector__XXX
+    SG_ Day_Of_Week:
+        24|8@1+    (1,0)   [1|7]   "Day Name"     Vector__XXX
+    SG_ Hour:
+        32|8@1+    (1,0)   [0|23]   "h"     Vector__XXX
+    SG_ Minute:
+        40|8@1+    (1,0)   [0|59]   "min"     Vector__XXX
+    SG_ Second:
+        48|8@1+    (1,0)   [0|59]   "s"     Vector__XXX
+    SG_ Timezone:
+        56|8@1+    (1,0)   [0|255]   "h"     Vector__XXX
+
+VAL_ 2583691231 Day_Of_Week
+    0 "Invalid"
+    1 "Sunday"
+    2 "Monday"
+    3 "Tuesday"
+    4 "Wednesday"
+    5 "Thursday"
+    6 "Friday"
+    7 "Saturday"
+    255 "Not supported";
+
+VAL_ 2583691231 Timezone
+    0 "Greenwich Mean Time"
+    4 "Eastern Daylight Time"
+    5 "Eastern Standard Time"
+    7 "Pacific Daylight Time"
+    8 "Pacific Standard Time"
+    0 "Western European Time"
+    22 "Central European Summer Time"
+    255 "Not supported";
+
+
+BO_ 2583615167 MFG_SPECIFIC_CLAIM_REQUEST: 8 Vector_XXX
+    SG_ Manufacturer_Code_MSB:
+        0|16@1+     (1,0)   [0|100000]      "A"     Vector_XXX
+
+VAL_ 2583615167 Manufacturer_Code
+    101	"Atwood Mobile Products"
+    102	"Carefree of Colorado"
+    103	"Dometic Corporation"
+    104	"Freightliner Custom Chassis Corp."
+    105	"General Dynamics - Intellitec Products"
+    106	"Girard Systems"
+    107	"Hopkins Manufacturing Corp."
+    108	"HWH Corporation"
+    109	"Integrated Power Systems"
+    110	"Onan / Cummins Power Generation"
+    111	"Progressive Dynamics, Inc."
+    112	"SilverLeaf Electronics, Inc."
+    113	"Spartan Motors Chassis, Inc."
+    114	"Technology Research Corporation"
+    115	"Transportation Systems Design, Inc."
+    116	"Vehicle Systems, Inc."
+    117	"Wire Design, Inc."
+    118	"Workhorse Custom Chassis"
+    119	"Xantrex Technology, Inc."
+    120	"Power Gear"
+    121	"RV Products"
+    122	"Suburban"
+    123	"Borg-Warner"
+    124	"Garnet Instruments"
+    125	"American Technology"
+    126	"Automated Engineering Corp.";
+
+
+BO_ 2583616399 DC_DIMMER_COMMAND_2: 8 Vector_XXX
+    SG_ Instance: 
+        0|8@1+ (1,0) [1|255] "Instance" Vector_XXX
+    SG_ Group:
+        8|8@1+ (1,0) [129|255] "Group" Vector_XXX
+    SG_ Master_Brightness:
+        16|8@1+ (0.5,0) [0|200] "%" Vector_XXX
+    SG_ Command:
+        24|8@1+ (1,0) [0|255] "Cmd" Vector_XXX
+    SG_ Delay:
+        32|8@1+ (1,0) [0|255] "Sec/Min" Vector_XXX
+    SG_ Interlock:
+        40|2@1+ (1,0) [0|255] "" Vector_XXX
+    SG_ Reserved_1:
+        42|6@1+ (1,0) [0|255] "" Vector_XXX
+    SG_ Ramp_Time:
+        48|8@1+ (1,0) [0|255] "" Vector_XXX
+    SG_ Reserved_2:
+        56|8@1+ (1,0) [0|255] "" Vector_XXX
+
+
+VAL_ 2583616399 Instance
+    255 "Group Command";
+
+VAL_ 2583616399 Group
+    129 "Node Group 1"
+    130 "Node Group 2"
+    131 "Node Group 3"
+    132 "Node Group 4"
+    133 "Node Group 5"
+    134 "Node Group 6"
+    135 "Node Group 7"
+    136 "Node Group 8"
+    255 "Non-group command";
+
+VAL_ 2583616399 Master_Brightness
+    230 "Scene 1 Memory Value"
+    231 "Scene 2 Memory Value"
+    232 "Scene 3 Memory Value"
+    233 "Scene 4 Memory Value"
+    234 "Scene 5 Memory Value"
+    235 "Scene 6 Memory Value"
+    236 "Scene 7 Memory Value"
+    237 "Scene 8 Memory Value"
+    238 "Scene 9 Memory Value"
+    239 "Scene 10 Memory Value"
+    240 "Scene 11 Memory Value"
+    249 "Scene 20 Memory Value"
+    250 "selects the Dimmed Memory Value"
+    251 "selects the Master Memory Value";
+
+CM_" Need to update stuff below for RVC";
+
+VAL_ 2583616399 Command
+    0 "Set Level Direct"
+    1 "ON - 100% direct"
+    2 "ON - Delay"
+    3 "OFF"
+    4 "Stop Ramping"
+    5 "Toggle between 0% and 100% and vice versa"
+    
+    8 "Switch Poke"
+    9 "Switch Press and hold"
+    10 "Switch Release"
+    
+    19 "Ramp Up from current brightness to 100%"
+    20 "Ramp down from current brightness to 0%";
+
+
+VAL_ 2583616399 Delay
+    241 "5 min"
+    242 "6 min"
+    243 "7 min"
+    244 "8 min"
+    245 "9 min"
+    246 "10 min"
+    247 "11 min"
+    248 "12 min"
+    249 "13 min"
+    250 "14 min"
+    255 "Continuous/NA";
+
+VAL_ 2583616399 Interlock
+    0 "No interlock active"
+    1 "Interlock A"
+    2 "Interlock B"
+    3 "NA";
+
+VAL_ 2583616399 Reserved_1
+    63 "NA";
+
+VAL_ 2583616399 Reserved_2
+    255 "NA";
+
+VAL_ 2583616399 Ramp_Time
+    255 "NA";
+
+
+BO_ 2583665871 Ambient_Temperature: 3   Vector__XXX
+    SG_ Instance: 
+        0|8@1+ (1,0) [1|255] "Instance" Vector_XXX
+    SG_ Ambient_Temp:
+        8|16@1+ (0.03125, -273) [-273|1735] "deg C" Vector_XXX
+
+
+BO_ 2181012480 Ambient_Temperature: 3   Vector__XXX
+    SG_ Instance: 
+        0|8@1+ (1,0) [0|255] "Instance" Vector_XXX
+    SG_ Ambient_Temp:
+        8|16@1+ (0.03125, -273) [-273|1735] "deg C" Vector_XXX
+
+
+BO_ 2583665823 Ambient_Temperature: 3   Vector__XXX
+    SG_ Instance: 
+        0|8@1+ (1,0) [0|255] "Instance" Vector_XXX
+    SG_ Ambient_Temp:
+        8|16@1+ (0.03125, -273) [-273|1735] "deg C" Vector_XXX
+
+
+BO_ 2583683791 THERMOSTAT_STATUS_1: 7   Vector__XXX
+    SG_ Instance:
+        0|8@1+ (1,0) [0|255] "Instance" Vector__XXX
+    SG_ Operating_Mode:
+        8|4@1+  (1,0)   [0|15]  "Mode"  Vector__XXX
+    SG_ Fan_Mode:
+        12|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Schedule_Mode:
+        14|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Fan_Speed:
+        16|8@1+ (0.5,0)   [0|255] "%" Vector__XXX
+    SG_ Setpoint_Temp_Heat:
+        24|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+    SG_ Setpoint_Temp_Cool:
+        40|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+
+VAL_ 2583683791 Operating_Mode
+    0 "Off"
+    1 "Cool"
+    2 "Heat"
+    3 "Auto heat/cool"
+    4 "Fan Only"
+    5 "Aux Heat"
+    6 "Window Defrost/Dehumidify"
+    15 "NA";
+
+VAL_ 2583683791 Fan_Mode
+    0 "Auto"
+    1 "On";
+
+VAL_ 2583683791 Schedule_Mode
+    0 "Disabled"
+    1 "Enabled";
+
+
+BO_ 2583603150 ROOF_FAN_STATUS_1: 8   Vector__XXX
+    SG_ Instance:
+        0|8@1+ (1,0) [0|255] "Instance" Vector__XXX
+    SG_ System_Status:
+        8|2@1+  (1,0)   [0|15]  "onOff"  Vector__XXX
+    SG_ Fan_Mode:
+        10|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Speed_Mode:
+        12|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Light:
+        14|2@1+ (1,0)   [0|1]   "onOff" Vector__XXX
+    SG_ Fan_Speed_Setting:
+        16|8@1+ (0.5,0)   [0|255] "%" Vector__XXX
+    SG_ Wind_Direction_Switch:
+        24|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Dome_Position:
+        26|4@1+ (1,0)   [0|15]  ""  Vector__XXX
+    SG_ Deprecated:
+        30|2@1+ (1,0)   [0|15]  ""  Vector__XXX
+    SG_ Ambient_Temperature:
+        32|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+    SG_ Setpoint:
+        48|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+
+VAL_ 2583603150 System_Status
+    0 "Off"
+    1 "On";
+
+VAL_ 2583603150 Fan_Mode
+    0 "Auto"
+    1 "Forced On";
+
+VAL_ 2583603150 Speed_Mode
+    0 "Auto (Variable)"
+    1 "Manual";
+
+VAL_ 2583603150 Light
+    0 "Off"
+    1 "On";
+
+VAL_ 2583603150 Wind_Direction_Switch
+    0 "Air Out"
+    1 "Air In";
+
+VAL_ 2583603150 Dome_Position
+    0 "Closed"
+    1 "1/4 Open"
+    2 "1/2 Open"
+    3 "3/4 Open"
+    4 "Open";
+
+BO_ 2583612063 DM_RV: 8 Vector__XXX
+    SG_ Operating_status_1:
+        0|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Operating_status_2:
+        2|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Yellow_Lamp_status:
+        4|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ Red_Lamp_status:
+        6|2@1+      (1,0)   [0|2]   "A"     Vector__XXX
+    SG_ DSA:
+        8|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_MSB:
+        16|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_ISB:
+        24|8@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ FMI:
+        32|5@1+      (1,0)   [0|255]   "A"     Vector__XXX
+    SG_ SPN_LSB:
+        37|3@1+      (1,0)   [0|255]   "A"     Vector__XXX
+
+VAL_ 2583612063 FMI
+    0	"Datum value above normal range"
+    1	"Datum value below normal range"
+    2	"Datum value erratic or invalid"
+    3	"Short circuit to high voltage (or complete sensor input failure)"
+    4	"Short circuit to low voltage (or complete sensor input failure) "
+    5	"Open circuit, or output current below normal"
+    6	"Grounded circuit, or output current above normal"
+    7	"Mechanical device not responding"
+    8	"Datum value showing error of frequency, pulse width, or period"
+    9	"Datum not updating at proper rate"
+    10	"Datum value fluctuating at abnormal rate"
+    11	"Failure not identifiable"
+    12	"Bad intelligent RV-C node"
+    13	"Calibration required"
+    14	"None of the above"
+    15	"Datum valid but above normal operational range (least severe) "
+    16	"Datum valid but above normal operational range (moderately severe) "
+    17	"Datum valid but below normal operational range (least severe) "
+    18	"Datum valid but below normal operational range (moderately severe) "
+    19	"Received invalid network datum "
+    20	"Network Device Not Responding "
+    21	"Networked Device Not Responding (failure due to the unresponsiveness of a second networked device) "
+    22	"Reverse polarity "
+    23	"Reserved"
+    24	"Reserved"
+    25	"Reserved"
+    26	"Reserved"
+    27	"Reserved"
+    28	"Reserved"
+    29	"Reserved"
+    30	"Reserved"
+    31	"Failure mode not available";
+
+VAL_ 2583612063 SPN_LSB
+    0 "Specific Point Unknown"
+    1 "Node Microprocessor (or ECM)"
+    2 "Node Analog-Digital Converter"
+    3 "Node Settings or Configuration"
+    4 "Node RAM"
+    5 "Node Power Supply"
+    6 "Node Temperature"
+    7 "Node Clock / Timer"
+    8 "Node Date / Time. Usually indicates a product that requires a clock DGN from another source."
+    9 "Node RV-C Connection. Usually indicates a product that requires a specific DGN from another source."
+    10 "Node Serial/ID Number"
+    11 "Node Processor Supervisor (Watchdog)"
+    12 "Node Firmware"
+    13 "Node Internal Subnetwork Communications.";
+
+
+BO_ 2583602756 ROOF_FAN_COMMAND_1: 8   Vector__XXX
+    SG_ Instance:
+        0|8@1+ (1,0) [0|255] "Instance" Vector__XXX
+    SG_ System_Status:
+        8|2@1+  (1,0)   [0|15]  "onOff"  Vector__XXX
+    SG_ Fan_Mode:
+        10|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Speed_Mode:
+        12|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Light:
+        14|2@1+ (1,0)   [0|1]   "onOff" Vector__XXX
+    SG_ Fan_Speed_Setting:
+        16|8@1+ (0.5,0)   [0|255] "%" Vector__XXX
+    SG_ Wind_Direction_Switch:
+        24|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Dome_Position:
+        26|4@1+ (1,0)   [0|15]  ""  Vector__XXX
+    SG_ Deprecated:
+        30|2@1+ (1,0)   [0|15]  ""  Vector__XXX
+    SG_ Ambient_Temperature:
+        32|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+    SG_ Setpoint:
+        48|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+
+VAL_ 2583602756 System_Status
+    0 "Off"
+    1 "On";
+
+VAL_ 2583602756 Fan_Mode
+    0 "Auto"
+    1 "Forced On";
+
+VAL_ 2583602756 Speed_Mode
+    0 "Auto (Variable)"
+    1 "Manual";
+
+VAL_ 2583602756 Light
+    0 "Off"
+    1 "On";
+
+VAL_ 2583602756 Wind_Direction_Switch
+    0 "Air Out"
+    1 "Air In";
+
+VAL_ 2583602756 Dome_Position
+    0 "Closed"
+    1 "1/4 Open"
+    2 "1/2 Open"
+    3 "3/4 Open"
+    4 "Open";
+
+
+BO_ 2180949760 ROOF_FAN_STATUS_1: 8   Vector__XXX
+    SG_ Instance:
+        0|8@1+ (1,0) [0|255] "Instance" Vector__XXX
+    SG_ System_Status:
+        8|2@1+  (1,0)   [0|15]  "onOff"  Vector__XXX
+    SG_ Fan_Mode:
+        10|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Speed_Mode:
+        12|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Light:
+        14|2@1+ (1,0)   [0|1]   "onOff" Vector__XXX
+    SG_ Fan_Speed_Setting:
+        16|8@1+ (0.5,0)   [0|255] "%" Vector__XXX
+    SG_ Wind_Direction_Switch:
+        24|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Dome_Position:
+        26|4@1+ (1,0)   [0|15]  ""  Vector__XXX
+    SG_ Deprecated:
+        30|2@1+ (1,0)   [0|15]  ""  Vector__XXX
+    SG_ Ambient_Temperature:
+        32|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+    SG_ Setpoint:
+        48|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+
+VAL_ 2180949760 System_Status
+    0 "Off"
+    1 "On";
+
+VAL_ 2180949760 Fan_Mode
+    0 "Auto"
+    1 "Forced On";
+
+VAL_ 2180949760 Speed_Mode
+    0 "Auto (Variable)"
+    1 "Manual";
+
+VAL_ 2180949760 Light
+    0 "Off"
+    1 "On";
+
+VAL_ 2180949760 Wind_Direction_Switch
+    0 "Air Out"
+    1 "Air In";
+
+VAL_ 2180949760 Dome_Position
+    0 "Closed"
+    1 "1/4 Open"
+    2 "1/2 Open"
+    3 "3/4 Open"
+    4 "Open";
+
+
+
+BO_ 2181012626 THERMOSTAT_AMBIENT_STATUS: 8    Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255] "Instance"  Vector__XXX
+    SG_ Ambient_Temp:
+        8|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+
+
+BO_ 2181030144 AIR_CONDITIONER_STATUS: 8    Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255] "Instance"  Vector__XXX
+    SG_ Operating_Mode:
+        8|8@1+  (1,0)   [0|255] "Operating Mode"    Vector__XXX
+    SG_ Max_Fan_Speed:
+        16|8@1+ (0.5,0)   [0|255] "%" Vector__XXX
+    SG_ Max_AC_Output_Level:
+        24|8@1+ (0.5,0)   [0|255] "%" Vector__XXX
+    SG_ Fan_Speed:
+        32|8@1+ (0.5,0)    [0|255] "%" Vector__XXX
+    SG_ AC_Output_Level:
+        40|8@1+ (0.5,0)   [0|255] "%" Vector__XXX
+    SG_ Dead_Band:
+        48|8@1+ (0.1,0)   [0|255] "deg C" Vector__XXX
+    SG_ Second_Stage_Dead_Band:
+        56|8@1+ (0.1,0)   [0|255] "deg C" Vector__XXX
+
+
+BO_ 2181030400 THERMOSTAT_STATUS_1: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255] "Instance"  Vector__XXX
+    SG_ Operating_Mode:
+        8|4@1+  (1,0)   [0|15] "Mode"  Vector__XXX
+    SG_ Fan_Mode:
+        12|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Schedule_Mode:
+        14|2@1+ (1,0)   [0|3]   "Mode"  Vector__XXX
+    SG_ Fan_Speed:
+        16|8@1+ (0.5,0)   [0|255]   "%" Vector__XXX
+    SG_ Setpoint_Temp_Heat:
+        24|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+    SG_ Setpoint_Temp_Cool:
+        40|16@1+    (0.03125, -273) [-273|1735] "deg C" Vector__XXX
+    SG_ NA_Byte:
+        56|8@1+ (1,0)   [0|255] "NA"    Vector__XXX
+
+
+BO_ 2181019392  TANK_STATUS: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255] "Instance"  Vector__XXX
+    SG_ Relative_Level:
+        8|8@1+  (1,0)   [0|255] "Level" Vector__XXX
+    SG_ Resolution:
+        16|8@1+ (1,0)   [0|255] "Resolution"    Vector__XXX
+    SG_ Absolute_Level:
+        24|16@1+    (1,0)   [0|65530]   "Liter" Vector__XXX
+    SG_ Tank_Size:
+        40|16@1+    (1,0)   [0|65530]   "Liter" Vector__XXX
+
+VAL_ 2181019392 Instance
+    0 "Fresh Water"
+    1 "Black Waste"
+    2 "Grey Waste"
+    3 "LPG"
+    16 "Second Fresh Water"
+    17 "Second Black Waste"
+    18 "Second Grey Waste"
+    19 "Second LPG";
+
+
+BO_ 2181024256  CHARGER_AC_STATUS_1: 8  Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)   [0|255] "Instance"  Vector__XXX
+    SG_ RMS_Voltage:
+        8|16@1+ (0.05,0)   [0|65530]   "V" Vector__XXX
+    SG_ RMS_Current:
+        24|16@1+ (1,0)   [0|65530]   "A" Vector__XXX
+    SG_ Frequency:
+        40|16@1+    (0.0078125,0)   [0|65530]   ""  Vector__XXX
+    SG_ Fault_Open_Ground:
+        56|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Fault_Open_Neutral:
+        58|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Fault_Reverse_Polarity:
+        60|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+    SG_ Fault_Ground_Current:
+        62|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+
+VAL_ 2181024256 RMS_Current
+    65535 "NA";
+
+VAL_ 2181024256 Fault_Open_Ground
+    3 "NA";
+
+VAL_ 2181024256 Fault_Open_Neutral
+    3 "NA";
+
+VAL_ 2181024256 Fault_Reverse_Polarity
+    3 "NA";
+
+VAL_ 2181024256 Fault_Ground_Current
+    3 "NA";
+
+
+BO_ 2181016832 COMPASS_BEARING_STATUS:   5    Vector__XXX
+    SG_ Adjusted_Compass_Bearing:
+        0|16@1+ (0.0078125,0) [0|360] "Deg" Vector_XXX
+    SG_ Compass_Offset:
+        16|16@1+    (0.0078125,0) [0|360]   "Deg"   Vector__XXX
+    SG_ Compass_Calibration_Status:
+        32|2@1+ (1,0)   [0|3]   ""  Vector__XXX
+
+VAL_ 2181016832 Adjusted_Compass_Bearing
+    0 "North"
+    90 "East"
+    180 "South"
+    270 "West"
+    65535 "NA";
+
+VAL_ 2181016832 Compass_Offset
+    0 "North"
+    90 "East"
+    180 "South"
+    270 "West"
+    65535 "NA";
+
+VAL_ 2181016832 Compass_Calibration_Status
+    0 "Compass is calibrated"
+    1 "Compass in calibration process"
+    2 "Error"
+    3 "NA";
+
+
+BO_ 2181016576 ATS_AC_STATUS_2: 8   Vector__XXX
+    SG_ Transfer_Switch_Instance:
+        0|3@1+ (1,0) [0|3] "#" Vector_XXX
+    SG_ Input_Output_Type:
+        3|1@1+  (1,0)   [0|1]   ""  Vector__XXX
+    SG_ Source:
+        4|3@1+  (1,0)   [0|7]   ""  Vector__XXX
+    SG_ Leg:
+        7|1@1+  (1,0)   [0|1]   ""  Vector__XXX
+    SG_ Peak_Voltage:
+        8|16@1+ (0.05,0)    [0|65535]   "V" Vector__XXX
+    SG_ Peak_Current:
+        24|16@1+    (0.05,0) [0|65535]   "A" Vector__XXX
+    SG_ Ground_Current:
+        40|16@1+    (0.05,0)   [0|65535]   "A" Vector__XXX
+    SG_ Capacity:
+        56|8@1+     (1,0)   [0|250]     "A" Vector__XXX
+
+VAL_ 2181016576 Input_Output_Type
+    0 "Input"
+    1 "Output";
+
+VAL_ 2181016576 Source
+    0 "Primary"
+    1 "Secondary"
+    7 "Invalid";
+
+VAL_ 2181016576 Leg
+    0 "Leg1"
+    1 "Leg2";
+
+VAL_ 2181016576 Ground_Current
+    65535 "NA";
+
+VAL_ 2181016576 Capacity
+    255 "NA";
+
+
+BO_ 2181016320 ATS_AC_STATUS_3: 8   Vector__XXX
+    SG_ Transfer_Switch_Instance:
+        0|3@1+ (1,0) [0|3] "#" Vector_XXX
+    SG_ Input_Output_Type:
+        3|1@1+  (1,0)   [0|1]   ""  Vector__XXX
+    SG_ Source:
+        4|3@1+  (1,0)   [0|7]   ""  Vector__XXX
+    SG_ Leg:
+        7|1@1+  (1,0)   [0|1]   ""  Vector__XXX
+    SG_ Waveform:
+        8|2@1+ (1,0)    [0|3]   "" Vector__XXX
+    SG_ Phase_Status:
+        10|5@1+    (1,0) [0|3]   "" Vector__XXX
+    SG_ Real_power:
+        16|16@1+    (1,0) [0|65535]   "W" Vector__XXX    
+    SG_ Reactive_Power:
+        32|16@1+    (1,0)   [0|65535]   "VAr" Vector__XXX
+    SG_ Harmonic_Distortion:
+        48|8@1+     (0.5,0)   [0|255]     "%" Vector__XXX
+    SG_ Complementary_Leg:
+        56|8@1+     (1,0)   [0|255]     "" Vector__XXX
+
+VAL_ 2181016320 Input_Output_Type
+    0 "Input"
+    1 "Output";
+
+VAL_ 2181016320 Source
+    0 "Primary"
+    1 "Secondary"
+    7 "Invalid";
+
+VAL_ 2181016320 Leg
+    0 "Leg1"
+    1 "Leg2";
+
+VAL_ 2181016320 Complementary_Leg
+    255 "NA";
+
+VAL_ 2181016320 Harmonic_Distortion
+    255 "NA";
+
+VAL_ 2181016320 Waveform
+    0 "Sine Wave"
+    1 "Not True Sine Wave";
+
+VAL_ 2181016320 Phase_Status
+    0 "No complementary leg"
+    1 "In phase (240 VAC not available)"
+    2 "180 Degrees out of phase (240 VAC available)"
+    3 "Phase relationship is variable"
+    14 "Error"
+    15 "No Data";
+
+
+BO_ 2181028864 GENERATOR_STATUS_1: 8     Vector__XXX
+    SG_ Status:
+        0|8@1+  (1,0)   [0|255] ""  Vector__XXX
+    SG_ Engine_Run_Time:
+        8|32@1+ (1,0)   [0|4294967295]  "Mins"  Vector__XXX
+    SG_ Engine_Load:
+        40|8@1+ (0.5,0)   [0|255]   "%" Vector__XXX
+    SG_ Start_Battery_Voltage:
+        48|16@1+    (0.05, 0)   [0|65535]   "V" Vector__XXX
+
+VAL_ 2181028864 Status
+    0 "Stopped" 
+    1 "Preheat"
+    2 "Cranking" 
+    3 "Running"
+    4 "Priming"
+    5 "Fault"
+    6 "Engine run only"
+    7 "Test mode"
+    8 "Voltage adjust mode"
+    9 "Fault bypass mode"
+    10 "Configuration mode"
+    255 "NA";
+
+VAL_ 2181028864 Engine_Load
+    255 "NA";
+
+VAL_ 2181028864 Start_Battery_Voltage
+    65535 "NA";
+
+
+BO_ 2181021440 AC_LOAD_STATUS: 8    Vector__XXX
+    SG_ Instance:
+        0|8@1+  (1,0)  [0|255]  "#"     Vector__XXX
+    SG_ Group:
+        8|8@1+  (1,0)   [0|255] ""      Vector__XXX
+    SG_ Operating_Status:
+        16|8@1+ (0.5,0)   [0|255] "%"     Vector__XXX
+    SG_ Operating_Mode:
+        24|2@1+ (1,0)   [0|3]   ""      Vector__XXX
+    SG_ Variable_Level_Capability:
+        26|2@1+ (1,0)   [0|3]   ""      Vector__XXX
+    SG_ Priority:
+        28|4@1+ (1,0)   [0|15]  ""      Vector__XXX
+    SG_ Delay:
+        32|8@1+ (1,0)    [0|255] "Secs"  Vector__XXX
+    SG_ Demanded_Current:
+        40|8@1+ (1,0)   [0|255] "A"     Vector__XXX
+    SG_ Present_Current:
+        48|16@1+    (0.05,0)   [0|65536]   "A" Vector__XXX
+
+VAL_ 2181021440 Present_Current
+    65535 "NA";
+
+BO_ 2181037312 DC_SOURCE_STATUS_1: 8 Vector__XXX
+    SG_ DC_Instance:
+        0|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ Device_Priority:
+        8|8@1+  (1,0)   [0|255]     "NA"  Vector__XXX
+    SG_ DC_Voltage:
+        16|16@1+    (0.05,0)    [0|65535]   "V"     Vector__XXX
+    SG_ DC_Current:
+        32|32@1-    (0.001,0)   [0|4294967295]   "A"     Vector__XXX
+
+VAL_ 2181037312 DC_Instance
+    0 "Invalid"
+    1 "Main House Battery Bank"
+    2 "Chassis Start Battery"
+    3 "Secondary House Battery Bank"
+    4 "Generator Starter Battery"
+    5 "Arbitrary";
+
+VAL_ 2181037312 Device_Priority
+    120 "Battery SOC/BMS device"
+    100 "Inverter/Charger"
+    80 "Charger"
+    60 "Inverter"
+    40 "Voltmeter/Ammeter"
+    20 "Voltmeter"
+    0 "No priority, always reporting";
+
+VAL_ 2181037312 DC_Current
+    4294967295 "NA";

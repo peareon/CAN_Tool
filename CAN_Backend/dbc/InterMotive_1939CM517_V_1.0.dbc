@@ -1,0 +1,205 @@
+VERSION "1.0"
+
+CM_ "InterMotive_1939CM517 for Ford E Transit Chassis Interface
+Author: Damiano Liviero
+for Winnebago Industries Inc.
+";
+
+
+BO_ 2163249152 HIGH_VOLTAGE_BATTERY_VOLTAGE: 8  Vector__XXX
+    SG_ Battery_Voltage:
+        32|16@1+  (0.05,0)   [0|65535] "V"    Vector__XXX
+
+VAL_ 2163249152 Battery_Voltage
+    65535 "data invalid";
+
+
+
+BO_ 2163250688 INTERNAL_CHARGER_STATUS_AC_CHARGE: 8  Vector__XXX
+    SG_ Charge_Status:
+        32|2@1+  (1,0)   [0|2] "Status"    Vector__XXX
+
+VAL_ 2163250688 Charge_Status
+    0 "off"
+    1 "on"
+    3 "data invalid";
+
+
+
+BO_ 2163914752 DC_CHARGING_STATE: 8  Vector__XXX
+    SG_ Charge_Status:
+        0|2@1+  (1,0)   [0|2] "Status"  Vector__XXX
+
+VAL_ 2163914752 Charge_Status
+    0 "no connection"
+    1 "charging"
+    15 "data invalid";
+
+
+
+BO_ 2164048384 STATE_OF_CHARGE: 8  Vector__XXX
+    SG_ Charge_Percent:
+        32|8@1+  (0.4,0)   [0|255] "%"    Vector__XXX
+
+VAL_ 2164048384 Charge_Percent
+    255 " data invalid";
+
+
+
+BO_ 2164192256 TIRE_STATUS_1: 8  Vector__XXX
+    SG_ Location:
+        0|8@1+  (1,0)   [0|255] ""    Vector__XXX
+    SG_ Pressure:
+        8|8@1+  (4,0)   [0|255] "kPa"    Vector__XXX
+
+VAL_ 2164192256 Location
+    0 " Front Left"
+    1 "Front Right"
+    16 "Rear Left"
+    17 "Rear Right";
+
+VAL_ 2164192256 Pressure
+    255 "data invalid";
+
+
+
+BO_ 2164191488 VSS_VEHICLE_SPEED: 8  Vector__XXX
+    SG_ Vehicle_speed:
+        8|16@1+  (0.00390625,0)   [0|65535] "Km/h"    Vector__XXX
+
+VAL_ 2164191488 Vehicle_speed
+    65535 "data invalid";
+
+
+
+BO_ 2164193792 PB_PARK_BRAKE: 8  Vector__XXX
+    SG_ Park_Break_Status:
+        24|2@1+  (1,0)   [0|2] "Status"    Vector__XXX
+
+VAL_ 2164193792 Park_Break_Status
+    0 "released"
+    1 "applied"
+    3 "data invalid";
+
+
+
+BO_ 2163213568 TR_TRANSMISSION_RANGE: 8  Vector__XXX
+    SG_ Transmission_Status:
+        48|8@1+  (1,0)   [0|255] "Status"    Vector__XXX
+
+VAL_ 2163213568 Transmission_Status
+    80 "park"
+    78 "neutral"
+    82 "reverse"
+    68 "drive"
+    255 "data invalid";
+
+
+
+BO_ 2164179200 ODO_ODOMETER: 8  Vector__XXX
+    SG_ Distance_Traveled:
+        0|32@1+  (5,0)   [0|4294967295] "Meters"    Vector__XXX
+
+VAL_ 2164179200 Distance_Traveled
+    4294967295 "data invalid";
+
+
+
+BO_ 2164192512 AAT_AMBIENT_AIR_TEMPERATURE: 8  Vector__XXX
+    SG_ Temperature:
+        24|16@1+  (0.03125,-273) [-273|1735] "deg C"    Vector__XXX
+
+VAL_ 2164192512 Temperature
+    65535 "data invalid";
+
+
+
+BO_ 2164045312 _12_V_BATTERY_STATE_OF_CHARGE: 8  Vector__XXX
+    SG_ Percent_Charged:
+        0|16@1+  (0.000025,0) [0|65535] "%"    Vector__XXX
+
+VAL_ 2164045312 Percent_Charged
+    65535 "data invalid";
+
+
+
+CM_ "Combined Ignition Cycles Since Install, Charging Stage, Charger type,
+Pro power status,  1939CM517 Protocol Version, 1939CM517 Firmware Version";
+BO_ 2163214848 VEHICLE_STATUS_1: 8  Vector__XXX
+    SG_ Number_Of_Cycles:
+        0|16@1+  (1,0) [0|65535] ""    Vector__XXX
+
+    SG_ Charging_State:
+        16|3@1+  (1,0) [0|3] ""    Vector__XXX
+
+    SG_ Charger_Type:
+        19|3@1+  (1,0) [0|3] ""    Vector__XXX
+
+    SG_ Pro_Power_Status:
+        22|2@1+  (1,0) [0|2] ""    Vector__XXX
+
+    SG_ PROTOCOL_VERSION:
+        40|8@1+  (0.1,0) [0|255] ""    Vector__XXX
+
+    SG_ FIRMWARE_VERSION:
+        48|16@1+  (0.01,0) [0|255] ""    Vector__XXX
+
+VAL_ 2163214848 Number_Of_Cycles
+    65535 "data invalid";
+
+VAL_ 2163214848 Charging_State
+    0 "Not Charging"
+    1 "Bulk"
+    2 "Absorption"
+    3 "Float"
+    7 "data invalid";
+
+VAL_ 2163214848 Charger_Type
+    0 "Not Charging"
+    1 "Level 1"
+    2 "Level 2"
+    3 "Level 3 DC"
+    7 "data invalid";
+
+VAL_ 2163214848 Pro_Power_Status
+    0 "Off"
+    1 "Front On"
+    2 "Front & Rear On"
+    3 "data invalid";
+
+
+
+CM_ "Combined KEY_POSITION, MIL, HVAC, DOOR_LOCKS, 12V_BATTERY_VOLTAGE";
+BO_ 2163215360 VEHICLE_STATUS_2: 8  Vector__XXX
+    SG_ Key_Position:
+        0|4@1+  (1,0) [0|15] ""    Vector__XXX
+    SG_ MIL:
+        18|2@1+  (1,0) [0|3] ""    Vector__XXX
+    SG_ HVAC:
+        22|2@1+  (1,0) [0|3] ""    Vector__XXX
+    SG_ Door_Locks:
+        32|2@1+  (1,0) [0|3] ""    Vector__XXX
+    SG_ Battery_Voltage_12_V:
+        48|16@1+  (0.01,0) [0|65535] "V"    Vector__XXX
+
+VAL_ 2163215360 Key_Position
+    1 "Off"
+    4 "Run"
+    8 "Start"
+    15 "Data Invalid";
+
+VAL_ 2163215360 MIL
+    0 "False"
+    1 "True"
+    3 "Data Invalid";
+
+VAL_ 2163215360 HVAC
+    0 "False"
+    1 "True"
+    3 "Data Invalid";
+
+VAL_ 2163215360 Door_Locks
+    1 "All Locked"
+    2 "All Unlocked"
+    3 "Driver Unlocked"
+    7 "Data Invalid";

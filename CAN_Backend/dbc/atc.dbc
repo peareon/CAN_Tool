@@ -1,0 +1,92 @@
+VERSION "1.0"
+
+CM_ "RVC DBC File for ATC/KIB Gateway
+Author: Dominique Parolin
+for Winnebago Industries Inc.
+";
+
+
+BO_ 2583690639 DC_SOURCE_STATUS_1: 8 Vector_XXX
+    SG_ DC_Instance:
+        0|8@1+      (1,0)   [0|1]   "A"     Vector_XXX
+    SG_ Device_Priority:
+        8|8@1+      (1,0)   [20|20]   "A"     Vector_XXX
+    SG_ Device_Voltage:
+        16|16@1+      (0.05,0)   [0|65535]   "A"     Vector_XXX
+    SG_ NA_1:
+        32|8@1+     (1,0)   [0|255]     "A"     Vector_XXX
+    SG_ NA_2:
+        40|8@1+     (1,0)   [0|255]     "A"     Vector_XXX
+    SG_ NA_3:
+        48|8@1+     (1,0)   [0|255]     "A"     Vector_XXX
+    SG_ NA_4:
+        56|8@1+     (1,0)   [0|255]     "A"     Vector_XXX
+
+
+VAL_ 2583690639 DC_Instance
+    0 "House Battery"
+    1 "Chassis Battery";
+
+
+VAL_ 2583690639 Device_Priority
+    20 "Voltmeter";
+
+
+BO_ 2583616399 DC_DIMMER_COMMAND_2: 8 Vector_XXX
+    SG_ Instance: 
+        0|8@1+ (1,0) [1|255] "A" Vector_XXX
+    SG_ Group:
+        8|8@1+ (1,0) [129|255] "A" Vector_XXX
+    SG_ Master_Brightness:
+        16|8@1+ (1,0) [0|200] "A" Vector_XXX
+    SG_ Command:
+        24|8@1+ (1,0) [0|255] "A" Vector_XXX
+
+VAL_ 2583616399 Instance
+    255 "Group Command";
+
+VAL_ 2583616399 Group
+    129 "Node Group 1"
+    130 "Node Group 2"
+    131 "Node Group 3"
+    132 "Node Group 4"
+    133 "Node Group 5"
+    134 "Node Group 6"
+    135 "Node Group 7"
+    136 "Node Group 8"
+    255 "Non-group command";
+
+VAL_ 2583616399 Master_Brightness
+    0 "Off"
+    200 "100%";
+
+VAL_ 2583616399 Command
+    0 "Set Level Direct"
+    1 "ON - 100% direct"
+    
+    3 "OFF"
+    4 "Stop Ramping"
+    5 "Toggle between 0% and 100% and vice versa"
+    
+    8 "Switch Poke"
+    9 "Switch Press and hold"
+    10 "Switch Release"
+    
+    19 "Ramp Up from current brightness to 100%"
+    20 "Ramp down from current brightness to 0%";
+
+
+BO_ 2583616143 DC_DIMMER_STATUS_3: 8 Vector_XXX
+    SG_ Instance: 
+        0|8@1+ (1,0) [1|255] "A" Vector_XXX
+    SG_ Master_Brightness:
+        16|8@1+ (1,0) [0|255] "A" Vector_XXX
+    SG_ Command:
+        24|8@1+ (1,0) [0|255] "A" Vector_XXX
+
+
+VAL_ 2583616143 Master_Brightness
+    0 "Off"
+    200 "100%"
+    251 "N/A"
+    252 "N/A";
